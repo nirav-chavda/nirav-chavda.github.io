@@ -33,6 +33,13 @@
 	<!-- Colors -->
 	<link rel="alternate stylesheet" href="assets/css/colors/blue.css" title="blue" />
 	<link rel="stylesheet" href="assets/css/colors/defauld.css" title="defauld" />
+	<!-- reCaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("mail-form").submit();
+            }
+        </script>
 </head>
 
 <body class="white-vertion black-bg" style="font-family: 'Baloo 2', cursive !important;">
@@ -445,7 +452,7 @@ FOOTER 1
 								</div>
 								<!-- Subject Button -->
 								<div class="btn-form col-sm-12">
-									<button class="btn btn-fill btn-block" id="form-submit" name="send">
+									<button class="g-recaptcha btn btn-fill btn-block" id="form-submit" name="send" data-sitekey="6LdpzAAVAAAAAKEi497MT6pNypyFIa6kWGzkCP9V" data-callback='onSubmit'>
 										Send Message
 									</button>
 								</div>
@@ -516,7 +523,6 @@ FOOTER 1
 	<!-- Sweet Alert -->
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- Custom Scripts-->
-	<script src="assets/js/map-init.js"></script>
 	<script src="assets/js/custom-scripts.js"></script>
 	<script src="assets/js/mail-script.js"></script>
 </body>
