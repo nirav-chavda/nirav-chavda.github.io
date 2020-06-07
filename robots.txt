@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /index.html
+Sitemap: https://nirav-chavda.github.io/sitemap.xml
