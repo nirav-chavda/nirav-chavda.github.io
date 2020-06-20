@@ -65,6 +65,11 @@
             $(this).find(".owl-item.active .slide-text > *").addClass("fadeInUp animated").css("opacity", "1");
             $(this).find(".owl-item.active .slide-img").addClass("fadeInRight animated").css("opacity", "1");
         });
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('service worker registered'))
+                .catch(err => console.log('service worker not registered', err));
+        }
     });
 
     /*
